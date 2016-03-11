@@ -1,0 +1,54 @@
+@charset "utf-8";
+/*reset*/
+html, body, div, h1, h2, h3, h4, h5, h6, p,address, q,  dl, dt, dd, ol, ul, li, form, label, table, tr, th,tbody, tfoot, thead, article, aside, details, summary, figure, figcaption, footer, header, hgroup, menu, nav, section, audio, input, select, textarea {margin:0;padding:0;border:0;}
+header,footer,nav,section,menu,article,aside,hgroup { display:block;}
+
+body, dl, dd, h1, h2, h3, h4, h5, h6, p, form{margin:0;} 
+ol,ul{margin:0; padding:0;}
+label,input,textarea  {display: inline-block;vertical-align: middle;}
+input[type=button]{-webkit-appearance:none;outline:none;}
+a:focus,button:focus,input:focus{outline:0;}
+table {border-collapse:collapse; border-spacing:0;}
+ul,li{list-style: none;}
+a{text-decoration: none;color: #000;display: inline-block;}
+p.text{text-indent:2em;}
+i,em,cite{ font-style:normal;}
+body{background: #fff;font-family:"Microsoft Yahei","微软雅黑","Arial","Microsoft Jhenghei","sans-serif","Tahoma","宋体";}
+a:link,a:visited{}
+a:hover,a:active{text-decoration:none;}
+a{cursor: pointer;}
+
+h1, h2, h3, h4, h5, h6 {font-size: 100%;font-weight: normal;}
+/*移动端*/
+body{min-width:320px;max-width:640px;margin:0 auto;background: #ececec;}
+.header{width:100%;height:75px;line-height: 75px;background:#333;font-weight: 600;font-size: 32px;text-align:center;position: relative;}
+.header:after{display: table;content: "";clear: both;}
+
+/*公共库*/
+.fl{ float:left; }
+.fr{ float:right;}
+.t-over { text-overflow: ellipsis; white-space: nowrap;overflow:hidden;}   /* 不允许断行,超出用...代替 */
+.t-ovr { white-space: nowrap;}  /** 不允许断行   */
+.t-num{text-wrap: none; word-break: normal; }/* 数字不断行 */
+.t-letter{word-break: normal;}/* 单词不断行 */
+.box-justify { -webkit-box-pack:justify; }
+.textcenter{text-align: center;}
+.w100{width:100%;}
+
+.clearfix:after { 
+  content:"\200B"; 
+  display:block; 
+  height:0; 
+  clear:both; 
+} 
+.clearfix{*zoom:1;}/*IE/7/6*/
+.p-r{ position:relative}
+.p-a{ position:absolute}
+.mask{ background:rgba(0,0,0,0.9); width:100%; height:100%; position:fixed; top:0; left:0; z-index:10;}
+
+
+
+
+
+
+

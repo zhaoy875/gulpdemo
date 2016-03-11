@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+/*1219 下应用*/
+.appcontainer{}
+.appact_banner img{width:100%;}
+.appcontainer{background:#f7e7db;}
+.appcontainer .app_act{padding:30px 4%;color: #333;}
+.app_act .appitems{/* border:1px solid red; *//* overflow:hidden; */position:relative;border-radius:10px;margin: 0 auto;margin-bottom: 5px;}
+.itdetails{width: 100%;position: relative;background: #fff;border-top-left-radius: 10px;  border-top-right-radius: 10px;}
+.bottomsty{width:100%;height: 22px;background: url(../images/bottomstyle.png) no-repeat;background-size: contain;}
+.app_act .lefticon{text-align: center;width:25%;height:25%;padding: 3% 3% 3% 5%;}
+.app_act .lefticon .appicon{width: 85%;}
+.app_act .lefticon .appicon img{width: 100%;}
+.appdetails{max-height: 44px;overflow: hidden;}
+.seebtn{position:absolute;right:3px;bottom:2px;font-size:0.8em;font-weight:bold;cursor: pointer;}
+           
+.rightwrap{width: 63%;height:25%;padding: 4% 4% 4% 0;}
+.rightwrap .app{margin: 3% 0 0% 0;}
+.rightwrap .appname{/* border:1px solid green; */width:62%;overflow:hidden;font-size: 1.1em;white-space: nowrap;font-weight: bold;color: #757575;}
+.rightwrap .downloadapp{/* border:1px solid yellow; */width: 30%;}
+.rightwrap .downloadapp img{width:100%;}
+.rightwrap .appinfo{/* border:1px solid #000; */text-overflow: ellipsis; /* white-space: nowrap; */margin: 0% 0 0 0;transition: 1.2s;color: #757575;padding: 0.5em;}
+.rightwrap .appinfo:hover{background: #F3C0C6;border-radius:10px;color: rgb(113, 113, 113);}
+
+
+/*中奖查询*/
+.query{padding: 10px 5% 10px 5%;margin:0 auto;color:#333;width: 90%;}
+.queryitems{width:100%;position:relative;}
+.queryitems a{color: #DE6776;text-decoration:underline;}
+.topbar{width: 106%;text-align: center;
+    background: url(../images/topbar.png) no-repeat;background: #671F13; /* Old browsers */   
+         
+    background: linear-gradient(to right, #222 0%,#999 100%); /* W3C */
+    border-radius: 15px;/* background-size: cover; */
+    height: 30px;
+    position: relative;top: 15px;left: -3%;
+ }
+.topbar img{width:100%}.bottombar{
+    width:100%;background: url(../images/bottombar.png) no-repeat;
+          background-size: contain; 
+               height: 17px;}
+.prizelist{background: #F9F9F9;padding: 0.7em;
+}
+.prizetitle{text-align:center;animation-duration: 3s;color:#fefefe;font-weight:bold;margin: 8px 0 0px 0;text-shadow: 0px 0px 20px #111;}
+
+.seemore{float: right;overflow: hidden;background: #c63d4e;color: #fff;margin-top: 0px;padding: 6px 10px;border-radius: 3px;cursor: pointer;}
+.qu_list{text-align:center;width: 100%;}
+.prizelist{border-top-left-radius: 2px;      border-top-right-radius: 2px;max-height: 130px;      overflow: hidden;z-index: 20;position: relative;/* box-shadow: 0px 0px 4px #FFF; */text-shadow: 0 0px 4px #FFF;}
+.qu_list .list_th{color:#dd6372;border-bottom: 1px solid #dd6372;height: 33px;line-height: 33px;text-overflow: ellipsis; white-space: nowrap;}
+.qu_list tr>td{font-size: 0.9em;text-align: center;text-overflow: ellipsis;      white-space: nowrap;      overflow: hidden;}
+.qu_list tr>td a{display: block;max-width: 100px;text-overflow: ellipsis; white-space: nowrap;/* border: 1px solid; */margin: 0 auto;overflow: hidden;}
+
+.sharefriends{padding-right:2em;position:relative;}
+.shareicon a{width: 40px;height: 40px;}
+.shareicon a img{width: 92%;display:inline-block;}
+.shareto{position: relative;top: -11px;color: #fff;}
+@media (min-width:320px) and (max-width:359px) { 
+.qu_list tr>td a {max-width: 89px;}
+ }
+@media (min-width:360px){ 
+.qu_list tr>td a {max-width: 160px;}
+ }
+
+
+/*活动规则*/
+.ruleitems{margin:10px 0;width:100%;}
+.ruletxt{padding:0 5%;}
+.ruleitems .ruletitle{    
+	display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    height: 32px;
+    color: #fff;
+    line-height: 32px;
+    padding: 0 1em;
+    background: #dd6372;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.bottomrule{background: #EACDCE;color: #DA6565;border-radius: 17px;text-align:center;width: 93%;margin: 20px auto;font-size: 1em;}

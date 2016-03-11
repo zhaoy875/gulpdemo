@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width,initial-scale=1.0, user-scalable=no" name="viewport"/>
+    <meta content="yes" name=" apple-mobile-web-app-capable"/>
+    <meta content="no" name="apple-touch-fullscreen"/>
+    <meta content="black" name=" apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+	<title>听歌猜题</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<script type="text/javascript" src="js/jq.js"></script>
+
+</head>
+<body style="background-color: #F7E7DB;">
+	<div class="container">
+		<!-- 头部 -->
+		<header>
+	    <div class="headnav p-r">
+	        <a href="index.html" class="return"></a>
+	        <a href="###" class="header_title">猜歌“赚”流量</a>
+	        <a href="##用户中心链接"><span class="login logined" id="userCenter"></span></a>
+	    </div>
+		</header>
+
+		<!-- 音乐模块 -->
+		<div class="musicwrap w100">
+			<div class="music_h">
+				这是哪位明星的歌？先听听再答~
+			</div>
+
+			<!-- 播放器 -->
+			<div class="playwrap">
+				<!-- 播放按钮 -->
+				<div class="playbtn">
+					<a class="playbtna" style="width:100%;height:100%;display:inline-block;cursor:pointer;" href="javascript:void(0);" onclick="playOrPaused(this);"></a>
+				</div>
+				<div class="player" style="visibility:hidden">
+				<!-- loop是否循环 -->
+				<!--h5 Audio API http://www.w3school.com.cn/tags/html_ref_audio_video_dom.asp -->
+					<audio id="myaudio" controls="controls"  preload="meta">
+        				建议您升级浏览器以支持html5音乐播放
+            			<source src="music/sAr - Wailling.mp3">
+            		</audio>
+				</div>
+
+				<!-- 蒙版 -->
+			<div class="musicmask" style="display:block"></div>
+			</div>
+			
+
+		</div>
+
+		<!-- 主要内容 -->
+		<div class="main w100">
+
+			<!-- 答题 -->
+			<div class="dati">
+				<div class="dati_box">
+				<form action=" " method="post" id="submitform" class="datiform">
+					<div class="items">
+					<input type="radio" checked="checked"  name="answer" id="answer1" value="1">
+  					<label for="answer1"><span class="radiolabel selected"></span> sAr - Wailling</label>
+					</div>
+
+  					<div class="items">
+  					<input type="radio"  name="answer" id="answer2" value="2">
+  					<label for="answer2"><span class="radiolabel"></span> 那英</label>
+  					</div>
+					<br>
+  					<div class="items">
+  					<input type="radio"  name="answer" id="answer3" value="3">
+  					<label for="answer3"><span class="radiolabel"></span> 宋祖英</label>
+  					</div>
+
+  					<div class="items">
+  					<input type="radio"  name="answer" id="answer4" value="4">
+  					<label for="answer4"><span class="radiolabel"></span> 孟庭苇</label>
+  					</div>
+
+				</form>
+					
+				</div>
+				
+				<div class="submit_btn">
+					<input class="dati_sub_btn"  type="submit" value="提交"></input>
+				</div>
+				<script type="text/javascript">
+				$(document).ready(function() {
+					$('.items label').click(function() {
+						$(this).children("span").addClass("selected");
+            			$(this).parents().siblings().find('span').removeClass("selected");
+					});
+				});
+				</script>
+
+			</div>
+
+
+			<!-- 更多推荐 -->
+			<div class="morecontent">
+				<div class="moretitle">
+					<h2>想看更多精彩内容？请猛戳下方！</h2>
+				</div>
+				
+				<div class="morelink">
+					<ul>
+						<li class="moreitems">
+							<a href="####">
+								<img src="images/more.png" alt="">
+								<p class="t-over">标题1标题1标题1标题1标题1标题1</p>
+							</a>
+						</li>
+						<li class="moreitems">
+							<a href="####">
+								<img src="images/more.png" alt="">
+								<p class="t-over">标题1标题1</p>
+							</a>
+						</li>
+						<li class="moreitems">
+							<a href="####">
+								<img src="images/more.png" alt="">
+								<p class="t-over">标题1标题1</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+
+		</div>
+
+
+		<!-- 答题结果弹窗 -->
+		<!-- 蒙版 -->
+		<div class="resultmask" style="display:none"></div>
+		<!-- 弹窗 -->
+		<div class="resultwrap" style="display:none">
+			<div class="result ">
+				<!-- 等待过程-->
+				<div class="waitresult">
+					<br>
+					<img src="images/load.gif" alt="">
+					<p>程序猿努力为您加载中。。。</p>
+					<br><br>
+				</div>
+
+				<!-- 返回5种结果 -->
+				<div class="txtresult result1" style="display:none">
+					<div class="resu_txt">
+						<div class="face"></div>
+						<p class="jieguo_p1">回答正确！</p>
+						<p class="jieguo_text " >恭喜您获得30M流量!记得明天再来哦！</p>
+					</div>
+					<div class="confirm"><a href="javascript:void(0);" class="confirm_btn">确定</a></div>
+				</div>
+
+				<div class="txtresult result2" style="display:none">
+					<div class="resu_txt">
+						<div class="face"></div>
+						<p class="jieguo_p1">回答正确！</p>
+						<p class="jieguo_text" >很遗憾来迟了，奖品被早来的土匪抢光了。<br>记得明天还有机会挑战哦！</p>
+					</div>
+					<div class="confirm"><a href="javascript:void(0);" class="confirm_btn">确定</a></div>
+				</div>
+
+				<div class="txtresult result3" style="display:none">
+					<div class="resu_txt">
+						<div class="face"></div>
+						<p class="jieguo_p1">很抱歉您答错了！</p>
+						<p class="jieguo_text"> 记得明天还有机会挑战哦！</p>
+					</div>
+					<div class="confirm"><a href="javascript:void(0);" class="confirm_btn">确定</a></div>
+				</div>
+				
+				
+				<div class="txtresult result4" style="display:none">
+					<div class="resu_txt">
+						<div class="face"></div>
+						<p class="jieguo_p1">您还未选择答案哦！</p>
+						<p class="jieguo_text" >请选择答案！</p>
+					</div>
+					<div class="confirm"><a href="javascript:void(0);" class="confirm_btn">确定</a></div>
+				</div>
+
+				<div class="txtresult result5" style="display:none">
+					<div class="resu_txt">
+						<div class="face"></div>
+						<p class="jieguo_p1">您已参加过了,活动虽好,不要贪心哦！</p>
+						<p class="jieguo_text" >每天仅可答题一次，记得明天再来哦！</p>
+					</div>
+					<div class="confirm"><a href="javascript:void(0);" class="confirm_btn">确定</a></div>
+				</div>
+			
+			</div>
+		</div>
+		<div>
+	
+		<!-- 答题结果弹窗 end -->
+		</div>
+
+	</div>
+
+<script type="text/javascript">
+			
+				// 播放器
+				var audio = $('#myaudio');
+				function playOrPaused(obj){
+					console.log(' playOrPaused runing');
+					if(audio.play){ 
+					// 当前是播放状态，pause()设为暂停
+						function pauseit(){
+							audio.pause();
+							$(obj).css('background', 'url(images/playbtn.png)');
+							$('.playwrap').css('background', 'url(images/mp3bg.png)');
+							$('.musicmask').css('display', 'block');
+							$('.player').css('visibility', 'hidden');
+						}
+						pauseit();
+						console.log(' pauseit runing');
+						
+						}
+						
+					if(audio.paused){ 
+						
+
+						playit();
+						console.log(' playit runing');
+						function playit(){
+							audio.play();
+							$(obj).css('background', 'url(images/pause.png) -3px 0');
+							$('.playwrap').css('background', 'url(images/boxing.gif)');
+							$('.musicmask').css('display', 'none');
+							$('.player').css('visibility', 'visible');
+							return;	
+							console.log(' playit style runing');
+						}
+					}
+
+					
+				}
+</script>
+
+<!--线上 <script type="text/javascript" src="js/listening.js"></script> -->
+</body>
+</html>

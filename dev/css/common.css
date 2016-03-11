@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+
+/*---- 公共设置 ---*/
+.f-f-s { font-family:"宋体";}
+.fl { float: left;}
+.fr { float: right;}
+.font85 { font-size: 0.85em;}
+.font75 { font-size: 0.75em;}
+.font125 { font-size: 1.25em;}
+.f12 { font-size: 12px;}
+.f14 { font-size: 14px;}
+.f16 { font-size: 16px;}
+.f20 { font-size: 20px;}
+.fb { font-weight: bold;}
+.mart10 { margin-top: 10px;}
+.mart15 { margin-top: 15px;}
+.marl10 { margin-left: 10px;}
+.marr10 { margin-right: 10px;}
+.marb40 { margin-bottom: 40px;}  /*new*/
+.padb40 { padding-bottom:40px;}
+.padt10 { padding-top: 10px;}
+.padt5 { padding-top: 5px;}
+.padl10 { padding-left: 10px;}
+.padr10 { padding-right: 10px;}
+.padb10 { padding-bottom: 10px;}
+.padlr7 { padding: 0 7px;}
+.padlr12 { padding: 0 12px;}
+.padtb10 { padding: 10px 0;}
+.pad5 { padding: 5px;}
+.pad10 { padding: 10px;}
+.bor1 { border:1px solid #ddd;}
+.bor2 { border:1px solid #e1e1e1;}
+.bor3 { border:1px dotted #ddd;}
+.bor-b { border-bottom:1px solid #e1e1e1;}
+.bor-b-d { border-bottom:1px dotted #e1e1e1;}
+.bor-l { border-left:1px solid #e1e1e1;}
+.born { border: none !important;}
+.bor-r { border-radius:3px;}
+.bor-r1 { border-radius:5px;}
+.bor-r2 { border-radius:8px;}
+.t-c { text-align: center;}
+.t-l { text-align: left;}
+.t-r { text-align: right;}
+.v-t { vertical-align: top;}
+.v-m { vertical-align: middle;}
+.bg-f { background: #fff;}
+.bg-f6 { background: #f6f6f6;}
+.bg-c3 { background: #c3c3c3;}
+.bg-f60 { background: #f60;}
+.bg-f00 { background: #f00;}
+.bg-e { background: #eee;}
+.cf { color: #fff;}
+.c1 { color: #111;}
+.c3 { color: #333;}
+.c4 { color: #444;}
+.c8 { color: #888;}
+.c9 { color: #999;}
+.red { color: #f00;}
+.red-y { color: #f60;}
+.line30 { line-height: 30px;}
+.line20 { line-height: 20px;}
+.line15 { line-height: 15px;}
+.w25 { width: 25%;}
+.w100 { width: 100%;}
+.w50 { width: 50%;}
+.w20 { width: 20%;}
+.w0 { width: 0%;}
+.w32 { width: 32%;}
+.h25 { height: 25px;}
+.d-webkit { display: -webkit-box;}
+.box-flex { -webkit-box-flex:1.0;}
+.box-justify { -webkit-box-pack:justify; }
+.d-table { display: table;}
+.d-b { display: block;}
+.d-i-b { display:inline-block;}
+.d-t-cell { display: table-cell;}
+.p-a { position: absolute;}
+.p-r { position: relative;}
+.over { overflow: hidden;}
+.t-over { text-overflow: ellipsis; white-space: nowrap;}
+.t-ovr { white-space: nowrap;}
+/*------- 按照分辨率设置字体 -------*/
+@media screen and (min-width:480px){
+    .font{
+        font-size: 21px;
+    }
+}
+@media screen and (min-width:640px){
+    .font{
+        font-size: 28px;
+    }
+}
